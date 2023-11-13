@@ -163,8 +163,8 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LG(LC(NUMBER_7))  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LC(NUMBER_7))  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans                &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans                &trans  &trans
             >;
