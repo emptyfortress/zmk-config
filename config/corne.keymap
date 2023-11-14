@@ -64,6 +64,78 @@
 
             label = "SWAPL";
         };
+
+        move1: move1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(N7)>;
+
+            label = "MOVE1";
+        };
+
+        move2: move2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(N8)>;
+
+            label = "MOVE2";
+        };
+
+        move3: move3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(NUMBER_9)>;
+
+            label = "MOVE3";
+        };
+
+        move4: move4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(N0)>;
+
+            label = "MOVE4";
+        };
+
+        move5: move5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(RETURN)>;
+
+            label = "MOVE5";
+        };
+
+        move6: move6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LA(N7)>;
+
+            label = "MOVE6";
+        };
     };
 };
 
@@ -138,7 +210,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &swapH  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &swapH  &swapJ  &swapK  &swapL  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
