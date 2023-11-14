@@ -98,6 +98,15 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        js_arrow: js_arrow {
+            compatible = "zmk,behavior-macro";
+            label = "JS_ARROW";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_tap>, <&kp EQUAL &kp GREATER_THAN &kp SPACE>;
+        };
     };
 };
 
@@ -137,9 +146,9 @@
             //                      | ADJ | ___ | ___ |    | ___ | ___ | ADJ |
 
             bindings = <
-&kp LGUI      &kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN    &kp HASH                  &kp SLASH                &kp DOLLAR    &kp NUMBER_7           &kp NUMBER_8  &kp NUMBER_9  &kp MINUS   &mt RIGHT_GUI LS(G)
+&kp LGUI      &kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN    &kp HASH                  &js_arrow                &kp NUMBER_0  &kp NUMBER_7           &kp NUMBER_8  &kp NUMBER_9  &kp MINUS   &mt RIGHT_GUI DOLLAR
 &kp LCTRL     &kp PERCENT  &kp CARET        &kp AMPERSAND  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS    &kp ASTERISK  &kp NUMBER_4           &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &mt RIGHT_CONTROL EQUAL
-&kp LEFT_ALT  &kp COMMA    &kp TILDE        &kp BACKSLASH  &kp UNDERSCORE            &kp LG(SPACE)            &kp NUMBER_0  &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp RALT
+&kp LEFT_ALT  &kp COMMA    &kp TILDE        &kp BACKSLASH  &kp UNDERSCORE            &kp LG(SPACE)            &kp SLASH     &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &mt RIGHT_ALT RS(G)
                                             &lt 3 TAB      &mt LEFT_SHIFT BACKSPACE  &trans                   &trans        &mt RIGHT_SHIFT SPACE  &lt 3 DEL
             >;
         };
