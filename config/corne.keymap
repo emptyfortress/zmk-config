@@ -40,6 +40,30 @@
 
             label = "SWAPH";
         };
+
+        swapJ: swapJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(NUMBER_7)>, <&macro_tap>, <&kp J>;
+
+            label = "SWAPJ";
+        };
+
+        swapK: swapK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(NUMBER_7)>, <&macro_tap>, <&kp K>;
+
+            label = "SWAPK";
+        };
+
+        swapL: swapL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(NUMBER_7)>, <&macro_tap>, <&kp L>;
+
+            label = "SWAPL";
+        };
     };
 };
 
