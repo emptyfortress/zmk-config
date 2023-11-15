@@ -216,6 +216,11 @@
             bindings = <&kp LA(SPACE)>;
             key-positions = <16 15>;
         };
+
+        systemLang {
+            bindings = <&kp RG(SPACE)>;
+            key-positions = <18 20>;
+        };
     };
 
     keymap {
