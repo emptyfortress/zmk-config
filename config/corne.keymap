@@ -269,9 +269,9 @@
             //                          | ___ | ___  | ADJ  |            | ADJ  | ___  | ___ |
 
             bindings = <
-&mt LEFT_GUI CAPS      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &lt 5 PLUS      &kp PAGE_UP    &kp HOME        &trans        &trans           &kp C_VOL_UP      &mt RIGHT_GUI KP_NUMLOCK
-&kp LCTRL              &kp KP_SLASH     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN      &mt RCTRL KP_ENTER
-&mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1  &kp N2  &kp N3  &kp KP_DOT      &kp PAGE_DOWN  &kp END         &trans        &trans           &kp K_PLAY_PAUSE  &kp RALT
+&mt LEFT_GUI CAPS      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &lt 5 PLUS      &kp PAGE_UP    &kp HOME        &trans        &trans           &kp C_VOL_UP  &mt RIGHT_GUI KP_NUMLOCK
+&kp LCTRL              &kp KP_SLASH     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN  &mt RCTRL KP_ENTER
+&mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1  &kp N2  &kp N3  &kp KP_DOT      &kp PAGE_DOWN  &kp END         &trans        &trans           &kp K_MUTE    &kp RALT
                                                 &trans  &trans  &lt 5 RET       &lt 5 ESC      &trans          &trans
             >;
         };
