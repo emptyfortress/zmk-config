@@ -125,7 +125,7 @@
             label = "MOVE5";
         };
 
-        move6: move6 {
+        move_1: move_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -134,7 +134,55 @@
                 <&macro_tap>,
                 <&kp LA(N7)>;
 
-            label = "MOVE6";
+            label = "MOVE_1";
+        };
+
+        move_2: move_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LA(NUMBER_8)>;
+
+            label = "MOVE_2";
+        };
+
+        move_3: move_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LA(NUMBER_9)>;
+
+            label = "MOVE_3";
+        };
+
+        move_4: move_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LA(N0)>;
+
+            label = "MOVE_4";
+        };
+
+        move_5: move_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LA(RETURN)>;
+
+            label = "MOVE_5";
         };
     };
 };
@@ -208,10 +256,10 @@
 
         move {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &swapH  &swapJ  &swapK  &swapL  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &move_1  &move_2  &move_3  &move_4  &move_5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &move1   &move2   &move3   &move4   &move5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &swapH   &swapJ   &swapK   &swapL   &trans   &trans
+                        &trans  &trans  &trans    &trans   &trans   &trans
             >;
         };
 
