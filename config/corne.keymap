@@ -184,6 +184,22 @@
 
             label = "MOVE_5";
         };
+
+        setA: setA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(NUMBER_7)>, <&macro_tap>, <&kp A>;
+
+            label = "SETA";
+        };
+
+        setD: setD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(NUMBER_7)>, <&macro_tap>, <&kp D>;
+
+            label = "SETD";
+        };
     };
 };
 
@@ -193,7 +209,12 @@
 
         lang_switch {
             bindings = <&kp LC(CARET)>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
+        };
+
+        alfred {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <16 15>;
         };
     };
 
@@ -238,18 +259,18 @@
             //                          | ___ | ___  | ADJ  |            | ADJ  | ___  | ___ |
 
             bindings = <
-&mt LEFT_GUI CAPS      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &lt 5 PLUS      &none      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp C_VOL_UP  &mt RIGHT_GUI KP_NUMLOCK
-&kp LCTRL              &kp KP_SLASH     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &none      &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp C_VOL_DN  &mt RCTRL KP_ENTER
-&mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1  &kp N2  &kp N3  &kp KP_DOT      &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp C_MUTE    &kp RALT
-                                                &trans  &trans  &lt 5 RET       &lt 5 ESC  &trans     &trans
+&mt LEFT_GUI CAPS      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &lt 5 PLUS      &kp PAGE_UP    &kp HOME        &trans        &trans           &kp C_VOL_UP  &mt RIGHT_GUI KP_NUMLOCK
+&kp LCTRL              &kp KP_SLASH     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN  &mt RCTRL KP_ENTER
+&mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1  &kp N2  &kp N3  &kp KP_DOT      &kp PAGE_DOWN  &kp END         &trans        &trans           &kp C_MUTE    &kp RALT
+                                                &trans  &trans  &lt 5 RET       &lt 5 ESC      &trans          &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &none
+&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &setA
 &trans  &trans  &trans  &trans  &trans  &trans           &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &kp LA(LC(SPACE))
-&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(H)             &kp LG(J)             &kp LG(K)             &kp LG(L)             &none            &none
+&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(H)             &kp LG(J)             &kp LG(K)             &kp LG(L)             &none            &setD
                         &trans  &mo 4   &kp LA(LC(H))    &kp LA(LC(L))         &kp LA(NUMBER_7)      &kp LA(NUMBER_8)
             >;
         };
