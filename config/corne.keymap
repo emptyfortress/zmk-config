@@ -236,6 +236,16 @@
             bindings = <&kp LG(V)>;
             key-positions = <27 29>;
         };
+
+        screenshot {
+            bindings = <&kp LS(LC(LG(NUMBER_4)))>;
+            key-positions = <0 1>;
+        };
+
+        cleanshot {
+            bindings = <&kp LS(LG(NUMBER_4))>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
