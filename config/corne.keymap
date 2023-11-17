@@ -214,7 +214,7 @@
 
         alfred {
             bindings = <&kp LA(SPACE)>;
-            key-positions = <15 17>;
+            key-positions = <15 16>;
         };
 
         systemLang {
@@ -249,7 +249,7 @@
 
         navLayer {
             bindings = <&mo 3>;
-            key-positions = <15 16>;
+            key-positions = <15 17>;
         };
     };
 
