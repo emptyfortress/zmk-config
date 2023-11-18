@@ -236,21 +236,6 @@
             bindings = <&kp LG(V)>;
             key-positions = <27 29>;
         };
-
-        screenshot {
-            bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <0 1>;
-        };
-
-        cleanshot {
-            bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <12 13>;
-        };
-
-        navLayer {
-            bindings = <&mo 3>;
-            key-positions = <15 17>;
-        };
     };
 
     keymap {
@@ -271,7 +256,7 @@
             >;
         };
 
-        lower_layer {
+        numbers {
             // -----------------------------------------------------------------------------------------
             //|LGUI/CAPS |  *  |  7 |  8  |  9  |  +  |    |  !  |  @  |  #  |  $  |  %  | RGUI/F1 |
             //|CTRL/MENU |  /  |  4 |  5  |  6  |  -  |    |  ^  |  &  |  *  |  (  |  )  | CTRL/F2 |
@@ -282,7 +267,16 @@
 &kp LGUI             &kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN    &kp HASH                  &js_arrow                &kp NUMBER_0  &kp NUMBER_7           &kp NUMBER_8  &kp NUMBER_9  &kp MINUS   &mt RIGHT_GUI DOLLAR
 &mt LCTRL BACKSLASH  &kp PERCENT  &kp CARET        &kp AMPERSAND  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS    &kp ASTERISK  &kp NUMBER_4           &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &mt RIGHT_CONTROL EQUAL
 &kp LEFT_ALT         &kp COMMA    &kp TILDE        &kp PIPE       &kp UNDERSCORE            &kp LG(SPACE)            &kp SLASH     &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &mt RIGHT_ALT RS(G)
-                                                   &lt 5 TAB      &mt LEFT_SHIFT BACKSPACE  &trans                   &trans        &mt RIGHT_SHIFT SPACE  &lt 5 DEL
+                                                   &lt 4 TAB      &mt LEFT_SHIFT BACKSPACE  &trans                   &trans        &mt RIGHT_SHIFT SPACE  &lt 4 DEL
+            >;
+        };
+
+        nav {
+            bindings = <
+&move_1  &move_2  &move_3  &move_4  &move_5            &kp LS(LC(LG(NUMBER_4)))    &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &setA
+&move1   &move2   &move3   &move4   &move5             &kp LS(LG(NUMBER_4))        &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &kp LA(LC(SPACE))
+&swapH   &swapJ   &swapK   &swapL   &kp LS(LA(LG(R)))  &trans                      &kp LG(H)             &kp LG(J)             &kp LG(K)             &kp LG(L)             &none            &setD
+                           &trans   &trans             &kp LA(LC(H))               &kp LA(LC(L))         &kp LA(NUMBER_7)      &kp LA(NUMBER_8)
             >;
         };
 
@@ -294,28 +288,10 @@
             //                          | ___ | ___  | ADJ  |            | ADJ  | ___  | ___ |
 
             bindings = <
-&mt LEFT_GUI CAPS      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &lt 5 PLUS      &kp PAGE_UP    &kp HOME        &trans        &trans           &kp C_VOL_UP  &mt RIGHT_GUI KP_NUMLOCK
-&kp LCTRL              &kp KP_SLASH     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN  &mt RCTRL KP_ENTER
-&mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1  &kp N2  &kp N3  &kp KP_DOT      &kp PAGE_DOWN  &kp END         &trans        &trans           &kp K_MUTE    &kp RALT
-                                                &trans  &trans  &lt 5 RET       &lt 5 ESC      &trans          &trans
-            >;
-        };
-
-        nav {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &setA
-&trans  &trans  &trans  &trans  &trans  &trans           &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &kp LA(LC(SPACE))
-&trans  &trans  &trans  &trans  &trans  &trans           &kp LG(H)             &kp LG(J)             &kp LG(K)             &kp LG(L)             &none            &setD
-                        &trans  &mo 4   &kp LA(LC(H))    &kp LA(LC(L))         &kp LA(NUMBER_7)      &kp LA(NUMBER_8)
-            >;
-        };
-
-        move {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &move_1  &move_2  &move_3  &move_4  &move_5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &move1   &move2   &move3   &move4   &move5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &swapH   &swapJ   &swapK   &swapL   &trans   &trans
-                        &trans  &trans  &trans    &trans   &trans   &trans
+&kp F1    &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &kp PAGE_UP    &kp HOME        &trans        &trans           &kp C_VOL_UP  &trans
+&kp F7    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN  &trans
+&kp CAPS  &trans  &trans  &trans   &trans   &trans     &kp PAGE_DOWN  &kp END         &trans        &trans           &kp K_MUTE    &kp RALT
+                          &trans   &trans   &trans     &trans         &trans          &trans
             >;
         };
 
