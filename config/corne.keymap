@@ -238,6 +238,18 @@
 
             label = "CLOSEQUOTE";
         };
+
+        move6: move6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(NUMBER_7)>,
+                <&macro_tap>,
+                <&kp LC(NUMBER_1)>;
+
+            label = "MOVE6";
+        };
     };
 };
 
@@ -312,7 +324,7 @@
         nav {
             bindings = <
 &trans  &move_5            &move_4  &move_3  &move_2               &move_1                     &kp LG(LC(NUMBER_7))  &kp LG(LC(NUMBER_8))  &kp LG(LC(NUMBER_9))  &kp LG(LC(NUMBER_0))  &kp LG(LC(RET))  &setA
-&trans  &move5             &move4   &move3   &move2                &move1                      &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &kp LA(LC(N1))
+&move6  &move5             &move4   &move3   &move2                &move1                      &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))  &kp LA(LC(NUMBER_0))  &kp LA(LC(RET))  &kp LA(LC(N1))
 &trans  &kp LS(LA(LG(R)))  &trans   &trans   &kp LS(LG(NUMBER_4))  &kp LS(LC(LG(NUMBER_4)))    &swapH                &swapJ                &swapK                &swapL                &mo 4            &setD
                                     &trans   &trans                &trans                      &trans                &kp LA(NUMBER_7)      &kp LA(NUMBER_8)
             >;
